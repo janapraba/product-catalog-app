@@ -1,27 +1,46 @@
-# ProductCatalogApp
+# Product Catalog App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+This is an Angular application for managing a product catalog with filtering and sorting functionalities.
 
-## Development server
-npm install 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Prerequisites
 
-## Code scaffolding
+- Node.js and npm: [Download and install Node.js](https://nodejs.org/).
+- Angular CLI: Install globally using `npm install -g @angular/cli`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup and Running the Project Locally
 
-## Build
+1. Clone the repository:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ```sh
+   git clone https://github.com/janapraba/product-catalog-app.git
 
-## Running unit tests
+2. Navigate to the project directory:
+   
+     cd product-catalog-app
+   
+3. Install the dependencies:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+       npm install
+   
+4. Run the application:
 
-## Running end-to-end tests
+      ng serve
+   
+6. Open your browser and navigate to http://localhost:4200/.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Project Structure
 
-## Further help
+src/app: Contains the main application files.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+service/product.service.ts: Service for managing product data.
+
+components/about/about.component.ts: Component for about page.
+
+components/filtering/filtering.component.ts: Component for filtering products.
+
+components/header/header.component.ts: Component for Header.
+
+components/sorting/sorting.component.ts: Component for sorting products.
+
+components/product-list/product-list.component.ts: Component for display products in productpage.
+
