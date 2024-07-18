@@ -44,6 +44,19 @@ components/sorting/sorting.component.ts: Component for sorting products.
 
 components/product-list/product-list.component.ts: Component for display products in productpage.
 
+## Features
+
+- Responsive design using Angular Material and SCSS
+- Filter and sort functionalities for product listings
+- Detailed product information display
+- Integrated Pagination functionality
+- User-friendly UI design
+
+## Usage
+
+- Navigate through different product categories.
+- Use filters to refine product listings.
+- Use Sorting to refine product listings based on Price.
 
 ## View the Hosted Application
 
