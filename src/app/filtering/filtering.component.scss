@@ -1,0 +1,52 @@
+@import '../../styles.scss';
+
+.range-inputs {
+    @include flex-align ;
+    
+    input[type="number"] {
+      @include input-style;
+    }
+    
+    span {
+      margin: 0 5px;
+    }
+  }
+  
+  .header-container {
+    @include flex-align;
+  }
+  
+  .clear-all, .select-all {
+    @include button-style;
+    margin-left: 10px;
+  }
+  
+  .checkbox-container {
+    font-size: 13px;
+    color: $secondary-color;
+  }
+  
+  input[type='checkbox']:checked {
+    accent-color: $primary-color;
+  }
+  
+  .main-header {
+    font-size: 15px;
+    color: $secondary-color;
+    margin-top: 18px;
+    font-weight: bold;
+  }
+  
+  .sub-header {
+    font-size: 15px;
+    color: $secondary-color;
+    margin-top: 18px;
+    font-weight: bold;
+  }
+  
+  .filter {
+    @include box-style;
+    padding: 5px;
+  }
+
+  

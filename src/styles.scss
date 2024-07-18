@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+$primary-color: #99b7bf;
+$secondary-color: #454e54;
+$background-color: #fff;
+$border-color: #ddd;
+$box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+$hover-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-align{
+  display: flex;
+  align-items: center;
+
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin input-style {
+  width: 60px;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+@mixin button-style {
+  border: none;
+  background-color: $background-color;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+@mixin box-style {
+  background: $background-color;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+  margin: 15px;
+  box-sizing: border-box;
+}
+
+// General styles
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 20px;
+}

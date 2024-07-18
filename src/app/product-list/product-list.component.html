@@ -1,0 +1,36 @@
+<div class="page-container">
+  <div class="product-list-container">
+    <div class="content-wrapper">
+      <div class="accordion">
+        <app-filtering [products]="products" (filteredProducts)="handleFilteredProducts($event)"></app-filtering>
+      </div>
+      <div class="products-section">
+        <div class="header-bar">
+          <div class="productLength">{{ displayedProducts.length }} Items Found</div>
+          <div class="filterOptions" *ngIf="displayedProducts.length > 0">
+            <app-sorting (sortChange)="handleSortChange($event)"></app-sorting>
+          </div>
+        </div>
+        <div class="product-list">
+          <ng-container *ngIf="displayedProducts.length > 0;">
+            <div *ngFor="let product of displayedProducts" class="product-card">
+              <img [src]="product.imageUrl" alt="{{ product.name }}">
+              <div class="product-details">
+                <h3 class="product-name">{{ product.name }}</h3>
+                <p class="price">${{ product.price }}</p>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <!-- Paginator -->
+        <mat-paginator [length]="filteredProducts.length"
+                       [pageSize]="pageSize"
+                       [pageSizeOptions]="[5, 10, 25, 100]"
+                       (page)="handlePageEvent($event)"
+                       *ngIf="displayedProducts.length > 0"
+                       >
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>

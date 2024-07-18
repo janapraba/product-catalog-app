@@ -1,0 +1,63 @@
+<div>
+    <div class="header-container">
+        <h4 class="main-header">Category</h4>
+        <div class="clear-all-button">
+            <button class="clear-all" (click)="clearAllCategory()">Clear All</button>
+        </div>
+        <span class="divider">|</span>
+        <div class="select-all-button">
+            <button class="select-all" (click)="selectAllCategories()">Select All</button>
+        </div>
+    </div>
+    <div class="checkbox-container">
+        <div *ngFor="let category of categories">
+            <input type="checkbox" class="category-checkbox" (change)="onCategoryChange(category, $event)" checked>
+            <label>{{ category }}</label>
+        </div>
+    </div>
+    <div>
+        <div class="header-container">
+            <h4 class="main-header">Price</h4>
+            <div class="clear-all-button">
+                <button class="clear-all" (click)="clearAllPrice()">Clear All</button>
+            </div>
+            <span class="divider">|</span>
+            <div class="select-all-button">
+                <button class="select-all" (click)="selectAllPrice()">Select All</button>
+            </div>
+        </div>
+        <div class="checkbox-container">
+            <div>
+                <input type="checkbox" class="price-checkbox" (change)="onBelow1000Change($event)">
+                <label>Below 1000$</label>
+            </div>
+            <div>
+                <input type="checkbox" class="price-checkbox" (change)="onRange1001to2000Change($event)">
+                <label>$ 1001 - $ 2000</label>
+            </div>
+            <div>
+                <input type="checkbox" class="price-checkbox" (change)="onRange2001to3000Change($event)">
+                <label>$ 2001 - $ 3000</label>
+            </div>
+            <div>
+                <input type="checkbox" class="price-checkbox" (change)="onRange3001to4000Change($event)">
+                <label>$ 3001 - $ 4000</label>
+            </div>
+        </div>
+        <div class="header-container">
+            <h4 class="sub-header">Enter Price Range</h4>
+            <div class="clear-all-button">
+                <button class="clear-all" (click)="clearPriceRange()">Clear All</button>
+            </div>
+        </div>
+        <div class="range-inputs">
+            <div class="input-container">
+                <input type="number" placeholder="Min" class="min-price-input" (input)="onMinPriceChange($event)" />
+            </div>
+            <span>-</span>
+            <div class="input-container">
+                <input type="number" placeholder="Max" class="max-price-input" (input)="onMaxPriceChange($event)" />
+            </div>
+        </div>
+    </div>
+</div>
