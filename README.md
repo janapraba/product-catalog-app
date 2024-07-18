@@ -49,5 +49,5 @@ components/product-list/product-list.component.ts: Component for display product
 
 The application is hosted on GitHub Pages and can be viewed at the following link:
 
-[Product Catalog App](https://janapraba.github.io/product-catalog-app/products)
+[Product Catalog App](https://janapraba.github.io/product-catalog-app/about)
 
